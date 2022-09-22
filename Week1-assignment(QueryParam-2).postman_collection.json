@@ -1,0 +1,106 @@
+{
+	"info": {
+		"_postman_id": "e3eb5be3-cab9-4e58-9157-507b32b6db48",
+		"name": "Week1-assignment(QueryParam-2)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19920582"
+	},
+	"item": [
+		{
+			"name": "Param-10",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "aYoMO/Wc8!g6",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://dev123188.service-now.com/api/now/table/incident?sysparm_fields=number&sysparm_limit=10",
+					"protocol": "https",
+					"host": [
+						"dev123188",
+						"service-now",
+						"com"
+					],
+					"path": [
+						"api",
+						"now",
+						"table",
+						"incident"
+					],
+					"query": [
+						{
+							"key": "sysparm_fields",
+							"value": "number"
+						},
+						{
+							"key": "sysparm_limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Param-3",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "aYoMO/Wc8!g6",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://dev123188.service-now.com/api/now/table/incident?sysparm_fields=number&sysparm_limit=3",
+					"protocol": "https",
+					"host": [
+						"dev123188",
+						"service-now",
+						"com"
+					],
+					"path": [
+						"api",
+						"now",
+						"table",
+						"incident"
+					],
+					"query": [
+						{
+							"key": "sysparm_fields",
+							"value": "number"
+						},
+						{
+							"key": "sysparm_limit",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

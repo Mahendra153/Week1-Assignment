@@ -1,0 +1,236 @@
+{
+	"info": {
+		"_postman_id": "af41adbd-d4f4-4f3e-9ec1-d9735c65c820",
+		"name": "Week1-assignment(RESTAPI-1)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19920582"
+	},
+	"item": [
+		{
+			"name": "POST-Servicenow",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//assertion- status code is  verified\r",
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"sys_id\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "aYoMO/Wc8!g6",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"short_description\":\"Software cracked\",\"description\":\"Software version is outdated\"\r\n    \r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{Hostname}}/api/now/table/incident",
+					"protocol": "https",
+					"host": [
+						"{{Hostname}}"
+					],
+					"path": [
+						"api",
+						"now",
+						"table",
+						"incident"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET-Servicenow",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "aYoMO/Wc8!g6",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://{{Hostname}}/api/now/table/incident/0a71e33c874a51104ac453983cbb3592",
+					"protocol": "https",
+					"host": [
+						"{{Hostname}}"
+					],
+					"path": [
+						"api",
+						"now",
+						"table",
+						"incident",
+						"0a71e33c874a51104ac453983cbb3592"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT-Servicenow",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "aYoMO/Wc8!g6",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"short_description\":\"Software cracked-0100\",\"description\":\"Software version is outdated\"\r\n    \r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dev123188.service-now.com/api/now/table/incident/70b5c038874e11104ac453983cbb35c6",
+					"protocol": "https",
+					"host": [
+						"dev123188",
+						"service-now",
+						"com"
+					],
+					"path": [
+						"api",
+						"now",
+						"table",
+						"incident",
+						"70b5c038874e11104ac453983cbb35c6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PATCH-Servicenow",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "aYoMO/Wc8!g6",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "https://dev123188.service-now.com/api/now/table/incident/d91948f8874e11104ac453983cbb355a",
+					"protocol": "https",
+					"host": [
+						"dev123188",
+						"service-now",
+						"com"
+					],
+					"path": [
+						"api",
+						"now",
+						"table",
+						"incident",
+						"d91948f8874e11104ac453983cbb355a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE-Servicenow",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "aYoMO/Wc8!g6",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://dev123188.service-now.com/api/now/table/incident/d91948f8874e11104ac453983cbb355a",
+					"protocol": "https",
+					"host": [
+						"dev123188",
+						"service-now",
+						"com"
+					],
+					"path": [
+						"api",
+						"now",
+						"table",
+						"incident",
+						"d91948f8874e11104ac453983cbb355a"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
